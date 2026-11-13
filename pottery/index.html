@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>흙결 도자기 공방 | 성수동 원데이 클래스</title>
+<meta name="description" content="성수동 흙결 도자기 공방. 물레·핸드빌딩 원데이 클래스, 2인 커플 클래스, 정규반 예약.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1ea;--paper:#fffdf9;--ink:#2e2620;--sub:#7a6c60;--clay:#b5653f;--clay-d:#8f4a2b;--line:#e4d9cc;--sage:#8a9a7b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;padding-bottom:72px}
+h1,h2,h3,.serif{font-family:'Gowun Batang',serif;font-weight:700;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.demo{background:var(--ink);color:#f3e9dc;font-size:12px;text-align:center;padding:7px 12px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:'Gowun Batang',serif;font-size:20px;font-weight:700}
+.logo span{color:var(--clay)}
+nav a{font-size:14px;color:var(--sub);margin-left:18px}
+nav{display:none}
+.hero{display:grid;gap:28px;padding:24px 0 56px;align-items:center}
+.eyebrow{font-size:13px;color:var(--clay);font-weight:700;letter-spacing:.12em}
+.hero h1{font-size:clamp(34px,8vw,56px);line-height:1.25;margin:12px 0 16px}
+.hero p{color:var(--sub);font-size:16px;max-width:30em}
+.btns{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;border:1.5px solid var(--clay);cursor:pointer;font-family:inherit}
+.btn.fill{background:var(--clay);color:#fff}
+.btn.fill:hover{background:var(--clay-d)}
+.btn.ghost{color:var(--clay);background:transparent}
+.art{background:linear-gradient(160deg,#ead9c6,#d9bfa3);border-radius:28px;aspect-ratio:4/3.4;display:grid;place-items:center;position:relative;overflow:hidden}
+.art svg{width:72%}
+.art .tag{position:absolute;left:16px;bottom:16px;background:var(--paper);padding:10px 14px;border-radius:14px;font-size:13px;box-shadow:0 6px 20px rgba(60,40,20,.12)}
+.art .tag b{display:block;font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);background:var(--paper);border:1px solid var(--line);border-radius:20px;text-align:center}
+.facts div{padding:20px 6px}
+.facts div+div{border-left:1px solid var(--line)}
+.facts b{font-family:'Gowun Batang',serif;font-size:24px;display:block;color:var(--clay-d)}
+.facts span{font-size:12.5px;color:var(--sub)}
+section{padding:64px 0}
+.head{margin-bottom:28px}
+.head h2{font-size:clamp(26px,5.5vw,36px);line-height:1.35;margin-top:8px}
+.cards{display:grid;gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px 24px;position:relative}
+.card.best{border-color:var(--clay);box-shadow:0 10px 30px rgba(181,101,63,.12)}
+.badge{position:absolute;top:-11px;left:22px;background:var(--clay);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px}
+.card h3{font-size:21px}
+.card .meta{font-size:13px;color:var(--sub);margin:4px 0 14px}
+.card ul{list-style:none;font-size:14.5px}
+.card li{padding:5px 0 5px 20px;position:relative}
+.card li:before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--sage)}
+.price{font-family:'Gowun Batang',serif;font-size:26px;font-weight:700;margin-top:16px}
+.price small{font-size:13px;color:var(--sub);font-family:'Noto Sans KR',sans-serif;font-weight:400}
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+.step:before{counter-increment:s;content:"0" counter(s);font-family:'Gowun Batang',serif;font-size:22px;color:var(--clay);font-weight:700;min-width:34px}
+.step b{display:block;font-size:16px}
+.step span{font-size:14px;color:var(--sub)}
+.alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quotes{display:grid;gap:16px}
+.quote{background:var(--bg);border-radius:20px;padding:24px}
+.quote p{font-size:15px}
+.quote cite{display:block;margin-top:12px;font-size:13px;color:var(--sub);font-style:normal}
+.stars{color:var(--clay);letter-spacing:2px;font-size:14px;margin-bottom:8px}
+.contact{display:grid;gap:24px}
+.info dl{display:grid;grid-template-columns:72px 1fr;row-gap:12px;font-size:15px}
+.info dt{color:var(--sub)}
+form{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:12px}
+label{font-size:13px;color:var(--sub);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--clay);outline-offset:1px}
+.ok{display:none;background:#eef2e8;color:#4c5c3f;padding:12px 14px;border-radius:12px;font-size:14px}
+footer{padding:36px 0 24px;font-size:13px;color:var(--sub);border-top:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,253,249,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;z-index:10}
+.bar a{flex:1;text-align:center;padding:13px 0;border-radius:999px;font-weight:700;font-size:15px}
+.bar .call{border:1.5px solid var(--clay);color:var(--clay);flex:.6}
+.bar .book{background:var(--clay);color:#fff}
+@media(min-width:780px){
+ body{padding-bottom:0}.bar{display:none}nav{display:block}
+ .hero{grid-template-columns:1.05fr .95fr;padding:40px 0 80px}
+ .cards{grid-template-columns:repeat(3,1fr)}.quotes{grid-template-columns:repeat(3,1fr)}
+ .steps{grid-template-columns:repeat(2,1fr);column-gap:40px}
+ .contact{grid-template-columns:1fr 1fr;align-items:start}
+ section{padding:88px 0}
+}
+</style>
+</head>
+<body>
+<div class="demo">예시 작업 — 실제 업체가 아닌 포트폴리오용 가상 페이지입니다</div>
+<div class="wrap">
+<header>
+  <a class="logo" href="#">흙결<span>.</span></a>
+  <nav><a href="#class">클래스</a><a href="#flow">진행 순서</a><a href="#review">후기</a><a href="#book">예약</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="eyebrow">성수동 도자기 공방</div>
+    <h1>손으로 빚는<br>두 시간의 쉼</h1>
+    <p>처음이어도 괜찮아요. 흙을 만지고, 물레를 돌리고, 내가 쓸 그릇 하나를 직접 만들어 가는 원데이 클래스입니다.</p>
+    <div class="btns">
+      <a class="btn fill" href="#book">클래스 예약하기</a>
+      <a class="btn ghost" href="#class">가격 보기</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 300 260" fill="none">
+      <ellipse cx="150" cy="232" rx="110" ry="12" fill="#c9a988" opacity=".6"/>
+      <path d="M92 96c-6 50 4 104 26 126h64c22-22 32-76 26-126z" fill="#b5653f"/>
+      <path d="M92 96c-6 50 4 104 26 126h20c-20-28-28-80-24-126z" fill="#8f4a2b" opacity=".45"/>
+      <ellipse cx="150" cy="96" rx="58" ry="13" fill="#8f4a2b"/>
+      <ellipse cx="150" cy="94" rx="48" ry="8" fill="#5e3320"/>
+      <path d="M104 140c30 8 62 8 92 0M100 165c32 9 68 9 100 0" stroke="#f6e7d6" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+      <path d="M150 86c0-22-14-30-10-52M162 84c2-16 16-22 14-40" stroke="#8a9a7b" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="136" cy="30" rx="9" ry="14" fill="#8a9a7b" transform="rotate(-20 136 30)"/>
+      <ellipse cx="180" cy="40" rx="8" ry="13" fill="#a3b193" transform="rotate(25 180 40)"/>
+    </svg>
+    <div class="tag"><b>이번 주 토요일</b>오후 2시 · 2자리 남음</div>
+  </div>
+</div>
+
+<div class="facts">
+  <div><b>2시간</b><span>원데이 소요</span></div>
+  <div><b>최대 6명</b><span>소규모 정원</span></div>
+  <div><b>3주 뒤</b><span>완성품 수령</span></div>
+</div>
+
+<section id="class">
+  <div class="head"><div class="eyebrow">CLASS</div><h2>나에게 맞는 클래스를<br>골라 보세요</h2></div>
+  <div class="cards">
+    <div class="card">
+      <h3>핸드빌딩 원데이</h3>
+      <div class="meta">손으로 빚는 컵·접시 · 2시간</div>
+      <ul><li>작품 1점 제작</li><li>유약 색상 6종 중 선택</li><li>앞치마·도구 전부 제공</li></ul>
+      <div class="price">45,000원 <small>/ 1인</small></div>
+    </div>
+    <div class="card best">
+      <span class="badge">가장 인기</span>
+      <h3>물레 원데이</h3>
+      <div class="meta">전기 물레 체험 · 2시간</div>
+      <ul><li>작품 2점 제작</li><li>1:1 손잡아 드리는 지도</li><li>작업 사진 촬영해 드림</li></ul>
+      <div class="price">60,000원 <small>/ 1인</small></div>
+    </div>
+    <div class="card">
+      <h3>커플·2인 클래스</h3>
+      <div class="meta">둘만의 프라이빗 타임 · 2시간 30분</div>
+      <ul><li>물레 + 핸드빌딩 모두 체험</li><li>이니셜 각인 무료</li><li>선물 포장 포함</li></ul>
+      <div class="price">110,000원 <small>/ 2인</small></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="alt" id="flow">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">HOW IT WORKS</div><h2>예약부터 수령까지</h2></div>
+    <div class="steps">
+      <div class="step"><div><b>날짜 예약</b><span>아래 예약 폼이나 전화로 원하는 날짜를 알려 주세요.</span></div></div>
+      <div class="step"><div><b>공방에서 만들기</b><span>편한 옷으로 오시면 됩니다. 준비물은 없어요.</span></div></div>
+      <div class="step"><div><b>건조·유약·가마 소성</b><span>공방에서 두 번 구워 단단하게 완성합니다.</span></div></div>
+      <div class="step"><div><b>방문 수령 또는 택배</b><span>약 3주 뒤 문자로 알려 드려요. 택배비 4,000원.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+<section id="review">
+  <div class="head"><div class="eyebrow">REVIEW</div><h2>다녀간 분들의 이야기</h2></div>
+  <div class="quotes">
+    <div class="quote"><div class="stars">★★★★★</div><p>손재주가 없어서 걱정했는데 선생님이 옆에서 잡아 주셔서 그럴듯한 컵이 나왔어요.</p><cite>물레 원데이 · 김○○ 님</cite></div>
+    <div class="quote"><div class="stars">★★★★★</div><p>기념일에 다녀왔는데 이니셜 각인이 생각보다 예뻐요. 지금도 매일 쓰는 그릇입니다.</p><cite>커플 클래스 · 이○○ 님</cite></div>
+    <div class="quote"><div class="stars">★★★★★</div><p>조용하고 인원이 적어서 좋았어요. 두 시간 동안 휴대폰을 한 번도 안 봤네요.</p><cite>핸드빌딩 원데이 · 박○○ 님</cite></div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:0">
+  <div class="head"><div class="eyebrow">BOOKING</div><h2>예약 문의</h2></div>
+  <div class="contact">
+    <div class="info">
+      <dl>
+        <dt>주소</dt><dd>서울 성동구 성수동 (예시 주소) 2층</dd>
+        <dt>운영</dt><dd>화–일 11:00–20:00 · 월요일 휴무</dd>
+        <dt>전화</dt><dd>02-000-0000</dd>
+        <dt>주차</dt><dd>건물 뒤 공영주차장 이용</dd>
+      </dl>
+    </div>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
+      <label>이름<input required placeholder="홍길동"></label>
+      <label>연락처<input required type="tel" placeholder="010-0000-0000"></label>
+      <label>클래스<select><option>물레 원데이</option><option>핸드빌딩 원데이</option><option>커플·2인 클래스</option></select></label>
+      <label>희망 날짜·인원<textarea rows="3" placeholder="11월 22일 토요일 오후, 2명"></textarea></label>
+      <button class="btn fill" type="submit">예약 문의 보내기</button>
+      <div class="ok">문의가 접수되었습니다. (예시 페이지라 실제로 전송되지는 않습니다)</div>
+    </form>
+  </div>
+</section>
+
+<footer>흙결 도자기 공방 · 대표 홍길동 · 본 페이지는 가상 업체로 만든 예시 작업입니다.</footer>
+</div>
+
+<div class="bar"><a class="call" href="tel:020000000">전화</a><a class="book" href="#book">클래스 예약하기</a></div>
+</body>
+</html>
